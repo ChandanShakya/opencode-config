@@ -23,3 +23,6 @@ memory/
 *.p12
 *.pfx
 secrets/
+# secrets - token files, never publish
+.github-token
+*.token

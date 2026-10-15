@@ -41,13 +41,13 @@ git clone https://github.com/ChandanShakya/opencode-config ~/.config/opencode
 cd ~/.config/opencode
 ```
 
-2. Export secrets (never in files):
+2. Export secrets (never inside repo):
 
 ```sh
-export GITHUB_TOKEN="$(cat ~/.config/opencode/.github-token)"
+export GITHUB_TOKEN="$(cat ~/.local/share/opencode/.github-token)"
 ```
 
-If no token file exists yet, create one with mode `600` and paste the token once, then run the export above. The token must stay out of `opencode.jsonc`, shell history, and git.
+If no token file exists yet, create one at `~/.local/share/opencode/.github-token` with mode `600` and paste the token once, then run the export above. Never store token inside `~/.config/opencode`. The token must stay out of `opencode.jsonc`, shell history, and git.
 
 3. Rebuild dependencies:
 
