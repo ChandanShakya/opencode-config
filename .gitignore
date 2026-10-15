@@ -1,0 +1,25 @@
+node_modules/
+# dependencies - keep manifests tracked for reproducibility
+!package.json
+!package-lock.json
+!bun.lock
+# local machine state and secrets — never publish
+service.json
+opencode.jsonc.bak
+.caveman-active
+.caveman-mode-log.jsonl
+.caveman-opencode-ownership.json
+.ponytail-active
+.omo/
+.codegraph
+memory/
+.opencode/memory/
+# env / keys - never publish
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
