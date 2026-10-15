@@ -15,7 +15,7 @@
         "command": [
           "npx",
           "-y",
-          "brave-mcp@latest",
+          "brave-mcp@1.10.1",
           "--executablePath",
           "/usr/bin/brave-origin"
         ]
@@ -30,7 +30,7 @@
     "@tarquinen/opencode-dcp",
     "oh-my-opencode-slim",
     "opencode-agent-memory",
-    "github:obra/superpowers",
+    "github:obra/superpowers#bb92a77741419a4ab5f06e711a283343f1ada0c3",
     "./plugins/caveman"
   ],
   "formatter": true,

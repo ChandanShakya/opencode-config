@@ -7,7 +7,7 @@ Replicate this setup on a new machine with the steps below.
 ## Prerequisites
 
 - OpenCode CLI installed and on `PATH` (`opencode --version` works).
-- Node.js plus `npx` on `PATH` (required by local `brave-devtools` MCP via `npx -y brave-mcp@latest`).
+- Node.js plus `npx` on `PATH` (required by local `brave-devtools` MCP via `npx -y brave-mcp@1.10.1`).
 - Brave browser binary at `/usr/bin/brave-origin`. If Brave lives elsewhere, edit `executablePath` in `opencode.jsonc` before starting OpenCode.
 - `GITHUB_TOKEN` exported in the environment. The `github` MCP server reads it via `{env:GITHUB_TOKEN}`. Never paste the token into a file.
 - Optional, only for WARP auto-rotation: `warp-cli` and `curl` on `PATH`. Without them, everything else still works and `plugins/warp-rotate.js` just fails its rotation silently.
@@ -16,9 +16,9 @@ Replicate this setup on a new machine with the steps below.
 
 - `opencode.jsonc` — MCP servers and plugin list:
   - `github`: remote `https://api.githubcopilot.com/mcp/`, header `Authorization: Bearer {env:GITHUB_TOKEN}`, `oauth: false`.
-  - `brave-devtools`: local `npx -y brave-mcp@latest --executablePath /usr/bin/brave-origin`.
+  - `brave-devtools`: local `npx -y brave-mcp@1.10.1 --executablePath /usr/bin/brave-origin`.
   - `cloudflare-api`: remote `https://mcp.cloudflare.com/mcp`.
-  - Plugins: `@tarquinen/opencode-dcp`, `oh-my-opencode-slim`, `opencode-agent-memory`, `github:obra/superpowers`, `./plugins/caveman`.
+  - Plugins: `@tarquinen/opencode-dcp`, `oh-my-opencode-slim`, `opencode-agent-memory`, `github:obra/superpowers#bb92a77741419a4ab5f06e711a283343f1ada0c3`, `./plugins/caveman`.
   - `formatter: true`, `compaction.auto: true`.
 - `cli.json` — TUI preferences: word-wrap diffs, auto sidebar, no scrollbar, hidden thinking, animations on.
 - `dcp.jsonc` — schema pointer for `@tarquinen/opencode-dcp` dynamic context pruning.
